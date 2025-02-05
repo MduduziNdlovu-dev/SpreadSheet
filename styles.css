@@ -1,12 +1,80 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+/* Toolbar Styling */
+#toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#toolbar button,
+#toolbar input {
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#toolbar button:hover {
+  background-color: #0056b3;
+}
+
+#toolbar input {
+  background-color: white;
+  color: black;
+}
+
+/* Spreadsheet Container */
 #container {
-    display: grid;
-    grid-template-columns: 50px repeat(10, 200px);
-    grid-template-rows: repeat(11, 30px);
-  }
-  
-  .label {
-    background-color: lightgray;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 30px;
-  }
+  display: grid;
+  grid-template-columns: 50px repeat(10, 200px);
+  grid-template-rows: repeat(11, 30px);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+/* Labels */
+.label {
+  background-color: lightgray;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+/* Cells */
+input[type="text"] {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Dark Mode for Cells */
+.dark-mode #container {
+  background: #2e2e2e;
+}
+
+.dark-mode input[type="text"] {
+  background: #333;
+  color: white;
+  border-color: #555;
+}

@@ -1,75 +1,131 @@
-Functional Programming Spreadsheet
+# Functional Programming Spreadsheet
 
-An advanced, lightweight spreadsheet application built with vanilla JavaScript, HTML, and CSS. This project showcases functional programming techniques to create a dynamic, interactive spreadsheet that supports formulas, arithmetic operations, and custom functions.
+A dynamic, lightweight spreadsheet built with vanilla JavaScript and modern CSS. This project demonstrates advanced functional programming techniques, real-time formula evaluation, CSV import/export capabilities, and a sleek user interface with a dark mode toggle. It is designed to showcase clean, modular code and innovative features for a full-featured web application.
 
-🚀 Features
+![alt text](image.png)
 
-Dynamic Spreadsheet Grid – Automatically generates labeled rows (1-99) and columns (A-J).
+## Table of Contents
 
-Formula Evaluation – Supports basic arithmetic operations (+, -, *, /).
+- [Features](#features)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [Technologies Used](#technologies-used)
+- [Future Enhancements](#future-enhancements)
+- [License](#license)
 
-Built-in Functions:
+## Features
 
-sum(range): Calculates the sum of numbers in a given range.
+- **Dynamic Formula Evaluation:**  
+  - Supports arithmetic operations (`+`, `-`, `*`, `/`) with proper operator precedence.
+  - Evaluates cell formulas dynamically and supports custom spreadsheet functions such as `sum`, `average`, `median`, `min`, `max`, and `stddev`.
 
-average(range): Computes the average.
+- **CSV Import/Export:**  
+  - Easily import and export spreadsheet data in CSV format.
 
-median(range): Finds the median value.
+- **Dark Mode Toggle:**  
+  - Switch between light and dark themes with a simple click, enhancing user accessibility.
 
-increment(range): Increments each number in the range.
+- **Responsive & Modern UI:**  
+  - Clean, minimalistic design with smooth CSS transitions.
+  - Designed with functional programming principles and modular JavaScript for easy maintenance and scalability.
 
-random(x, y): Generates a random number between x and y.
+## Demo
 
-Range Selection – Allows referencing cell ranges (e.g., =sum(A1:A5)).
+[Live Demo](https://mduduzindlovu-dev.github.io/SpreadSheet/)
 
-Recursive Formula Resolution – Formulas can reference other cells, and they update dynamically.
+## Installation
 
-🛠️ Technologies Used
+To run the application locally:
 
-JavaScript (ES6+) – Functional programming for formula parsing and evaluation.
+1. **Clone the repository:**
 
-HTML & CSS (Grid Layout) – Structuring and styling the spreadsheet.
+   ```bash
+   git clone https://github.com/MduduziNdlovu-dev/SpreadSheet.git
+   cd spreadsheet
 
-📂 Project Structure
+# Usage
 
-📦 functional-spreadsheet
-├── 📄 index.html       # Main HTML structure
-├── 🎨 styles.css       # Styles using CSS Grid
-└── 📜 script.js        # JavaScript logic for formulas & interactions
+### Open `index.html` in Your Browser
 
-🖥️ Demo (How to Use)
+You can simply open the `index.html` file in your favorite browser or use a lightweight web server (e.g., [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VSCode).  
+No additional build steps or dependencies are required.
 
-Open index.html in your browser.
+### Formula Input
 
-Click on any cell and enter a value (numbers or formulas starting with =).
+Enter formulas in any cell by starting with an equals sign (`=`). The formula parser supports basic arithmetic as well as custom functions.  
+_Example:_  =sum(1,2,3) =A1+B2
 
-Use functions like =sum(A1:A5), =average(B2:B10), etc.
 
-Press Enter to evaluate the formula and see the result.
+### CSV Operations
 
-⚙️ Setup & Installation
+Use the toolbar buttons to export the current spreadsheet to CSV or import CSV data into the grid.
 
-This project is completely client-side and requires no setup:
+### Dark Mode
 
-# Clone the repository
-$ git clone https://github.com/yourusername/functional-spreadsheet.git
+Click the **"Toggle Dark Mode"** button in the toolbar to switch between light and dark themes.
 
-# Navigate into the project folder
-$ cd functional-spreadsheet
+---
 
-# Open index.html in a browser
+# Code Structure
 
-📌 Future Enhancements
+The project is structured to showcase modular and clean code. Key files include:
 
-Support for more advanced functions (e.g., min, max, standard deviation).
+- **`index.html`**  
+  Contains the basic layout and markup for the toolbar and spreadsheet grid.
 
-Enhanced UI/UX – Dark mode, better styling, and animations.
+- **`styles.css`**  
+  Implements modern styling with responsive design, dark mode, and smooth transitions.
 
-CSV Import/Export – Save and load spreadsheet data.
+- **`script.js`**  
+  Contains all JavaScript logic including:
 
-📜 License
+  - **Formula Evaluation:**  
+    Uses recursive functions to handle operator precedence and apply spreadsheet functions.
+  
+  - **UI Interactions:**  
+    Event handlers for updating cells, toggling dark mode, and importing/exporting CSV data.
+  
+  - **Utility Functions:**  
+    Includes helper functions like `range()`, `charRange()`, and more for data manipulation.
 
-This project is open-source and available under the MIT License.
+The code leverages ES6+ features such as arrow functions, template literals, and destructuring to ensure clarity and maintainability.
 
-⭐ If you find this project useful, consider giving it a star on GitHub! 🚀
+---
+
+# Technologies Used
+
+- **HTML5 & CSS3:**  
+  Used for structure and styling, including responsive design and smooth transitions.
+
+- **JavaScript (ES6+):**  
+  Implements functional programming concepts and a modular code structure.
+
+- **Browser APIs:**  
+  Utilizes FileReader, Blob, and LocalStorage for CSV operations and theme persistence.
+
+---
+
+# Future Enhancements
+
+- **Enhanced Cell Formatting:**  
+  Integrate a toolbar for rich text formatting (e.g., bold, italic, color).
+
+- **Drag-and-Drop:**  
+  Implement drag-and-drop functionality to move cells or ranges.
+
+- **Advanced Formulas & Custom Functions:**  
+  Allow users to define their own functions and macros.
+
+- **Unit & Integration Tests:**  
+  Add automated tests using frameworks like Jest and Cypress for higher code reliability.
+
+---
+
+# License
+
+This project is licensed under the **MIT License**.
+
+
 
